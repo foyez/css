@@ -23,8 +23,8 @@ The clip-path property in CSS allows you to specify a specific region of an elem
   /* Example: clip away the element from the top, right, bottom, and left edges */
   clip-path: inset(10px 20px 30px 40px); /* or "none" */
   
-  /* Example: clip element into a Heptagon */
-  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  /* Example: clip element into a Triangle */
+  clip-path: polygon(50% 0%, 100% 100%, 0 100%);
 }
 ```
 
