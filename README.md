@@ -13,3 +13,19 @@
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 ```
+
+## clip-path
+
+The clip-path property in CSS allows you to specify a specific region of an element to display, with the rest being hidden (or “clipped”) away.
+
+```css
+.clip-me {    
+  /* Example: clip away the element from the top, right, bottom, and left edges */
+  clip-path: inset(10px 20px 30px 40px); /* or "none" */
+  
+  /* Example: clip element into a Heptagon */
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+}
+```
+
+[CSS clip-path maker](https://bennettfeely.com/clippy/)
