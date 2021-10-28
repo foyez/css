@@ -268,4 +268,46 @@ The clip-path property in CSS allows you to specify a specific region of an elem
 
 #### 1. [Centering in CSS: A Complete Guide](https://css-tricks.com/centering-css-complete-guide/)
 
+#### 2. Styling Button
+
+```html
+<button class="btn">button 1</button> <a class="btn" href="#">button</a>
+```
+
+```scss
+.btn {
+  &,
+  &:link,
+  &:visited {
+    border: none; /* for button */
+    text-decoration: none; /* for link */
+    cursor: pointer;
+    display: inline-block;
+
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    font-size: 16px;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(#000, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+  }
+}
+```
+
 </details>
