@@ -220,6 +220,26 @@ The higher the specificity, the more difficult to override the rule.
 all elements to include padding and borders in the box model calculation instead of adding those widths to any defined dimensions.
 
 </details>
+  
+## Styling Links
+  
+<details>
+<summary>View contents</summary>
+  
+```html
+  <a href="https://www.google.com">google</a>
+```
+  
+```css
+/* css order should be this way */
+a::link {}
+a::visited {}
+a::hover {}
+a::focuse {}
+a::active {}
+```
+  
+</details>
 
 ## Background Properties
 
