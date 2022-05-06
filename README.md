@@ -274,6 +274,8 @@ element1~element2	p ~ ul	Selects every <ul> element that is preceded by a <p> el
 :target	#news:target	Selects the current active #news element (clicked on a URL containing that anchor name)
 :valid	input:valid	Selects all input elements with a valid value
 ```
+  
+[reference](https://www.w3schools.com/cssref/css_selectors.asp)
 
 </details>
   
