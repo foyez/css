@@ -218,6 +218,23 @@ The higher the specificity, the more difficult to override the rule.
 ````
 
 all elements to include padding and borders in the box model calculation instead of adding those widths to any defined dimensions.
+  
+```css
+/* Advanced selectors */
+h2 + p  /*every paragraph that is after "h2" */
+textarea ~ button /*every button that is aftrer textarea with same parent (<form> is the same parent in this example)*/
+ul > li /*every signle "li" inside of the "ul"*/
+ul li /*every "li" that goes up to "ul"*/
+
+/* Attribute selectors */
+p[class="review"] /*all of paragraphs with review class on them*/
+img[href^="../my code guide/"] /*every image that starts with that addres (replacing "=" with"^=")*/
+img[href$="../my code guide/"] /* its end with this attribute*/
+img[href*="../my code guide/"] /*if its contain anywhere*/
+h1[class~="site-header"] /*only works with white space seperator*/
+h1[class|="subtitle"] /*selects ones that start with "subtitle" or "subtitle" and "-" in following*/
+
+```
 
 </details>
   
