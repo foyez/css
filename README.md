@@ -347,6 +347,9 @@ The clip-path property in CSS allows you to specify a specific region of an elem
 #### 1. [Centering in CSS: A Complete Guide](https://css-tricks.com/centering-css-complete-guide/)
 
 #### 2. Styling Button
+  
+<details>
+<summary>View code</summary>
 
 ```html
 <button class="btn">button 1</button> <a class="btn" href="#">button</a>
@@ -385,7 +388,41 @@ The clip-path property in CSS allows you to specify a specific region of an elem
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
   }
+} 
+```
+  
+</details>
+  
+#### 3. set css variable dynamically
+  
+<details>
+<summary>View code</summary>
+  
+```html
+  <button class="btn">Click</buton>
+```
+  
+```css
+.btn {
+  color: var(--btn-color);
 }
 ```
+  
+```js
+const button = document.querySelector('.btn');
+
+button.addEventListener('pointerdown', (evnet) => {
+  button.setPointerCapture(event.pointerId) // pointer will work, if it's out of button area
+  button.addEventListener('pointermove', setColor);
+})
+
+const colors = ['red', 'green', 'blue'];
+const setColor = () => {
+  const randN = Math.floor(Math.random() * colors.length)
+  button.style.setProperty('--btn-color', colors[randN]);
+}
+```
+  
+</details>
 
 </details>
